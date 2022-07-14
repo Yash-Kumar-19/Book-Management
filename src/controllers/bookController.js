@@ -278,7 +278,7 @@ const updateBookById = async function (req, res) {
 
     if (!(req.validToken._id == bookIdCheck.userId))
       return res
-        .status(400)
+        .status(403)
         .send({ status: false, message: "Unauthorized access!" });
 
     let updateObject = {};
